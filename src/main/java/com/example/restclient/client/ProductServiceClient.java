@@ -21,7 +21,7 @@ public class ProductServiceClient
 		this.baseUrl = baseUrl;
 
 		restClient = RestClient.builder()
-				.baseUrl("${product.service.base-url}")
+				.baseUrl(baseUrl)
 				.build();
 	}
 
