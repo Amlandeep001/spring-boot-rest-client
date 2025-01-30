@@ -1,5 +1,6 @@
 package com.example.restclient.client;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -14,9 +15,9 @@ import com.example.restclient.dto.Product;
 public class ProductServiceClient
 {
 	private final RestClient restClient;
-	private final String baseUrl;
+	private final URI baseUrl;
 
-	public ProductServiceClient(@Value("${product.service.base-url}") String baseUrl)
+	public ProductServiceClient(@Value("${product.service.base-url}") URI baseUrl)
 	{
 		this.baseUrl = baseUrl;
 
