@@ -15,12 +15,9 @@ import com.example.restclient.dto.Product;
 public class ProductServiceClient
 {
 	private final RestClient restClient;
-	private final URI baseUrl;
 
 	public ProductServiceClient(@Value("${product.service.base-url}") URI baseUrl)
 	{
-		this.baseUrl = baseUrl;
-
 		restClient = RestClient.builder()
 				.baseUrl(baseUrl)
 				.build();
